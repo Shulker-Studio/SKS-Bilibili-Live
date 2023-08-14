@@ -1,0 +1,22 @@
+{
+  "name": "sks-bilibili-live",
+  "version": "0.1.0",
+  "description": "适用于LiteLoaderBDS的Bilibili直播间弹幕转发插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shulker-Studio/SKS-Bilibili-Live.git"
+  },
+  "author": "Shulker Studio",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Shulker-Studio/SKS-Bilibili-Live/issues"
+  },
+  "homepage": "https://github.com/Shulker-Studio/SKS-Bilibili-Live#readme",
+  "dependencies": {
+    "bilibili-live-ws": "^6.3.1"
+  }
+}
