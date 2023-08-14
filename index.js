@@ -11,8 +11,9 @@ ll.registerPlugin(
 let live = null
 const CONFIG_PATH = './plugins/SKS/Bilibili-Live/config.json'
 let conf = new JsonConfigFile(CONFIG_PATH)
-conf.init('room_id','1145141919810')
-conf.init('uid','1145141919810')
+conf.init('room_id',114514)
+conf.init('uid',1919810)
+conf.init('xboxid','steve')
 
 mc.listen("onServerStarted", () => {
     const cmd = mc.newCommand("blive", "Bilibili直播弹幕", PermType.Any);
@@ -24,7 +25,7 @@ mc.listen("onServerStarted", () => {
     cmd.overload(["GuiAction"]);
     cmd.setCallback((_cmd, _ori, out, res) => {
         if (typeof _ori.player === 'undefined') return out.success(`命令执行者非玩家，执行失败`)
-        if (_ori.player.realName !== 'lwenk' && _ori.player.realName !== 'iQiaFUN') return out.success(`权限不足，执行失败`)
+        if (_ori.player.realName !== conf.get('xboxid') ) return out.success(`权限不足，执行失败`)
         switch (res.action) {
             case "on":
                 if (live !== null) return out.success(`直播间已连接,无需再次连接`)
